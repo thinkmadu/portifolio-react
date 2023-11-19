@@ -1,38 +1,161 @@
-.App {
-  text-align: center;
+body{
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#navbar {
+  background-color: #a431be;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#nav-list{
+  display: flex;
+  flex-direction: row;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+li{
+  list-style: none;
+}
+
+a{
+  color: black;
+  text-decoration: none;
+  font-size: 1.5em;
+  padding: 1.05rem 2rem;
+}
+
+a:hover{
+  background-color: #4f284b;
+}
+
+#welcome-section{	
   display: flex;
   flex-direction: column;
+  width: 100%;
+  height: 100vh;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #000;
+  background-image: linear-gradient(62deg, rgb(58, 61, 64) 0%, rgb(24, 23, 25) 100%);
+}
+
+#welcome-section > h1 {
+  background: -webkit-linear-gradient(gray, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+#welcome-section > p{
+  color: #733380;
+  font-size: 2rem;
+  font-weight: 200;
+  font-style: italic;
+}
+
+#projects h2{
+  color: lightgrey;
+}
+
+.projects{
+  margin: 0;
+  padding: 8rem 2rem; 
+  text-align: center;
+  background-image: linear-gradient(-62deg, rgb(24, 23, 25) 0%, rgb(99, 83, 72) 100%);
+}
+
+ h2{
+  font-size: 3.2rem;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.project-img{
+  height: calc(100% - 5.8rem);
+  width: 100%;
+  object-fit: cover;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.project-tile{
+  color: gray;
+  width: 100%;
+  background-color: #8b4513;
+  margin:0;
+  padding: 2rem 0;
+}
+
+.project-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+#contacts{
+  background-image: linear-gradient(62deg, rgb(59, 57, 60) 0%, rgb(71, 61, 82) 100%);
+  width: 100%;
+  height: 80vh;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+}
+
+#contacts-p{
+  color: white;
+  font-style: italic;
+  font-weight: 100;
+  text-align: center;
+  font-size: 1.7rem;
+}
+
+#contacts p{
+  color: #a431be;
+}
+
+#contacts h2 {
+  color: lightgrey;
+}
+
+#contact-links {
+  margin-top: 20px;
+}
+
+#contact-links h2 {
+  font-size: 18px;
+  text-align: center;
+}
+
+.student-contact {
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.student-contact a {
+  text-decoration: none;
+  color: #a431be;
+}
+
+.student-contact a:hover {
+  text-decoration: underline;
+}
+.projects a:hover {
+  background-color: #4f284b;
+}
+
+@media (max-width: 800px){
+  h2{
+    font-size: 2.5rem;
   }
 }
